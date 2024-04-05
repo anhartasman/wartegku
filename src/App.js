@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <Counter />
       {/* <Message /> */}
+      <Greet name="Budi" heroName="Wonder Woman" />
       {/* <Greet name="Udin" heroName="Batman">
         This is the children props
       </Greet>
       <Greet name="Asep" heroName="Superman" />
-      <Greet name="Budi" heroName="Wonder Woman" />
       <Welcome name="Udin" heroName="Batman" />
       <Welcome name="Asep" heroName="Superman" />
       <Welcome name="Budi" heroName="Wonder Woman" /> */}
