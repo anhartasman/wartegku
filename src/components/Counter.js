@@ -10,10 +10,19 @@ class Counter extends Component {
   }
 
   increment() {
+    // this.setState(
+    //   {
+    //     count: this.state.count + 1,
+    //   },
+    //   () => {
+    //     // its called after the operation has completed
+    //     console.log("callback value ", this.state.count);
+    //   }
+    // );
     this.setState(
-      {
-        count: this.state.count + 1,
-      },
+      (prevState) => ({
+        count: prevState.count + 1,
+      }),
       () => {
         // its called after the operation has completed
         console.log("callback value ", this.state.count);
@@ -21,11 +30,19 @@ class Counter extends Component {
     );
   }
 
+  incrementFive() {
+    this.increment();
+    this.increment();
+    this.increment();
+    this.increment();
+    this.increment();
+  }
+
   render() {
     return (
       <div>
         <div>Count - {this.state.count}</div>
-        <button onClick={() => this.increment()}>Increment</button>
+        <button onClick={() => this.incrementFive()}>Increment</button>
       </div>
     );
   }
