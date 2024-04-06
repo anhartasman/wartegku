@@ -17,8 +17,8 @@ export class EventBind extends Component {
     return (
       <div>
         <div>{this.state.message}</div>
-        {/* every update to the state will cause the component to re render, not recommended */}
-        <button onClick={this.clickHandler.bind(this)}>click</button>
+        {/* this also will cause the component to re render, not recommended */}
+        <button onClick={() => this.clickHandler()}>click</button>
       </div>
     );
   }
