@@ -7,16 +7,13 @@ export class EventBind extends Component {
     this.state = {
       message: "Hello",
     };
-
-    {
-      /* this is the better method */
-    }
-    this.clickHandler = this.clickHandler.bind(this);
+    // event binding in constructor still the better
   }
 
-  clickHandler() {
+  //   event binding with class property as arrow function
+  clickHandler = () => {
     this.setState({ message: "Goodbye" });
-  }
+  };
 
   render() {
     return (
